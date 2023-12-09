@@ -1150,7 +1150,8 @@ const BREVO_API_KEY =
 const DATA = {
   sender: {
     name: "Jisna's wellwisher",
-    email: "sendAwishToCuteLady@example.com",
+    email:
+      "sendAwishToCuteLady" + Math.floor(Math.random() * 100) + "@example.com",
   },
   to: [
     {
@@ -1253,4 +1254,10 @@ function getBase64(file) {
   });
 
   return prom;
+}
+
+function rightPadName(name) {
+  if (name.length <= 6) {
+    name = name + ".....";
+  }
 }
