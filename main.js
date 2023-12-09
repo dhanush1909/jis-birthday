@@ -1152,8 +1152,8 @@ const DATA = {
   },
   to: [
     {
-      email: "dhanush1926@gmail.com",
-      name: "John Doe",
+      email: "jisna1909@gmail.com",
+      name: "Jisna",
     },
   ],
   subject: "Hey cutie!",
