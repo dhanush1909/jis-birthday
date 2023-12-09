@@ -1152,7 +1152,7 @@ const DATA = {
   },
   to: [
     {
-      email: "jisna1909@gmail.com",
+      email: "dhanush1926@gmail.com",
       name: "Jisna",
     },
   ],
