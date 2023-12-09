@@ -1144,9 +1144,6 @@ fileInput.onchange = function () {
   selectName.innerText = filename;
 };
 
-const BREVO_API_KEY =
-  "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";
-
 const DATA = {
   sender: {
     name: "Jisna's wellwisher",
@@ -1189,6 +1186,7 @@ document.getElementById("submitWish").onclick = async function (x, y) {
   console.log(queryString);
   const urlParams = new URLSearchParams(queryString);
   const name = urlParams.get("name");
+  const token = urlParams.get("tk");
 
   if (name != null && name != "") {
     tempTemplate = tempTemplate.replace(
@@ -1229,7 +1227,7 @@ document.getElementById("submitWish").onclick = async function (x, y) {
     body: JSON.stringify(DATA),
     headers: {
       accept: "application/json",
-      "api-key": BREVO_API_KEY,
+      "api-key": token,
       "content-type": "application/json",
     },
   });
