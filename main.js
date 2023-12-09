@@ -1145,7 +1145,7 @@ fileInput.onchange = function () {
 };
 
 const BREVO_API_KEY =
-  "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";
+  "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";
 
 const DATA = {
   sender: {
@@ -1195,7 +1195,8 @@ document.getElementById("submitWish").onclick = async function (x, y) {
       "$name",
       name == null || name === "" ? "UNKNOWN" : name
     );
-    DATA.sender.name = name;
+    DATA.sender.name = rightPadName(name);
+    console.log(DATA.sender.name);
   }
 
   try {
@@ -1260,4 +1261,6 @@ function rightPadName(name) {
   if (name.length <= 6) {
     name = name + ".....";
   }
+
+  return name;
 }
